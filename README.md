@@ -240,10 +240,10 @@ hypernode-core-protocol/
 
 This project follows principles from industry leaders:
 
-- **🔐 Trustless** (Nick Szabo): On-chain queue, cryptographic verification
-- **🧩 Modular** (Gavin Wood): Independent programs, composable design
-- **🛡️ Safe** (Dario Amodei): Circuit breakers, extensive validations
-- **✨ Clear** (Andrej Karpathy): One instruction per file, simple formulas
+- **🔐 Trustless**: On-chain queue, cryptographic verification
+- **🧩 Modular**: Independent programs, composable design
+- **🛡️ Safe**: Circuit breakers, extensive validations
+- **✨ Clear**: One instruction per file, simple formulas
 
 ---
 
