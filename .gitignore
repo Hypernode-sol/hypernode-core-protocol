@@ -1,0 +1,43 @@
+# Build artifacts
+target/
+**/*.rs.bk
+*.pdb
+
+# Anchor
+.anchor/
+test-ledger/
+
+# IDL
+target/idl/
+target/types/
+
+# Keys - CRITICAL
+.keys/
+*.key
+*.keypair
+*.json.keypair
+id_rsa*
+
+# Environment
+.env
+.env.local
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Dependencies
+Cargo.lock
+
+# Local testing
+.solana/
