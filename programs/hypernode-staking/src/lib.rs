@@ -18,10 +18,10 @@ declare_id!("HYPRstake1111111111111111111111111111111111");
 /// - Global stats tracking
 ///
 /// Architecture Principles:
-/// - Trustless: Time-locks enforced on-chain (Szabo)
-/// - Modular: Independent from jobs/nodes programs (Wood)
-/// - Safe: Extensive validations, no overflow (Amodei)
-/// - Clear: Simple xNOS formula, well documented (Karpathy)
+/// - Trustless: Time-locks enforced on-chain
+/// - Modular: Independent from jobs/nodes programs
+/// - Safe: Extensive validations, no overflow
+/// - Clear: Simple xNOS formula, well documented
 #[program]
 pub mod hypernode_staking {
     use super::*;

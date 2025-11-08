@@ -20,10 +20,10 @@ declare_id!("HYPRreward111111111111111111111111111111111");
 /// Formula: user_reward = (xNOS / total_xNOS) * accumulated_rewards
 ///
 /// Architecture Principles:
-/// - Trustless: Math-based distribution (Szabo)
-/// - Modular: Independent rewards program (Wood)
-/// - Safe: Overflow protection (Amodei)
-/// - Clear: Simple O(1) formula (Karpathy)
+/// - Trustless: Math-based distribution
+/// - Modular: Independent rewards program
+/// - Safe: Overflow protection
+/// - Clear: Simple O(1) formula
 #[program]
 pub mod hypernode_rewards {
     use super::*;

@@ -21,10 +21,10 @@ declare_id!("HYPRjobs11111111111111111111111111111111111");
 /// - recover: Refund expired jobs (anti-DoS)
 ///
 /// Architecture Principles:
-/// - Trustless: Queue-based matching on-chain (Szabo)
-/// - Modular: Independent from nodes/staking programs (Wood)
-/// - Safe: Extensive validations and escrow (Amodei)
-/// - Clear: One instruction per file, well documented (Karpathy)
+/// - Trustless: Queue-based matching on-chain
+/// - Modular: Independent from nodes/staking programs
+/// - Safe: Extensive validations and escrow
+/// - Clear: One instruction per file, well documented
 #[program]
 pub mod hypernode_jobs {
     use super::*;
