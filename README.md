@@ -69,6 +69,7 @@ Instructions:
 - register(hardware_specs)  // Register new compute node
 - update(hardware_specs)    // Update node specs
 - heartbeat()              // Keep-alive signal
+- check_health(passed, msg) // Health verification (permissionless)
 ```
 
 **Features:**
@@ -77,6 +78,8 @@ Instructions:
 - Reputation scoring (0-1000)
 - Uptime percentage tracking
 - Audit system for trusted nodes
+- Health check system with anti-spam protection
+- Automatic reputation penalties for failed checks
 
 **Program ID:** `HYPRnodes11111111111111111111111111111111111`
 
@@ -294,6 +297,59 @@ We welcome contributions! Please see our [Contributing Guide](./CONTRIBUTING.md)
 | **Modular Design** | 4 programs ✅ | 4 programs ✅ | 6 modules |
 
 ---
+
+## 🔍 Advanced Features
+
+### Health Check System (Checker)
+
+Decentralized node verification system enabling trustless quality monitoring.
+
+**On-Chain Instruction:**
+```rust
+pub fn check_health(
+    ctx: Context<CheckHealth>,
+    passed: bool,
+    message: String,
+) -> Result<()>
+```
+
+**Features:**
+- **Permissionless**: Anyone can verify any node
+- **Anti-Spam**: 5-minute minimum interval between checks
+- **Automatic Penalties**: Failed checks reduce reputation by 10 points
+- **Transparent Metrics**: All checks recorded on-chain
+
+**Node Health Metrics:**
+```rust
+pub struct Node {
+    // ... other fields ...
+    pub last_health_check: i64,
+    pub total_health_checks: u64,
+    pub passed_health_checks: u64,
+    pub failed_health_checks: u64,
+    pub health_check_pass_rate: u8, // 0-100
+}
+```
+
+**Usage Example:**
+```typescript
+import * as anchor from '@coral-xyz/anchor';
+
+// Anyone can check a node's health
+await program.methods
+  .checkHealth(true, "GPU responded correctly")
+  .accounts({
+    node: nodePublicKey,
+    checker: checkerKeypair.publicKey,
+  })
+  .rpc();
+```
+
+**Benefits:**
+- Maintains high network quality standards
+- Prevents unreliable nodes from degrading service
+- Enables community-driven monitoring
+- Creates economic incentives for node reliability
 
 ---
 
