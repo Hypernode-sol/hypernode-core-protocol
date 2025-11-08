@@ -238,7 +238,7 @@ hypernode-core-protocol/
 
 ### Code Principles
 
-This project follows principles from industry leaders:
+This project follows industry-leading practices:
 
 - **🔐 Trustless**: On-chain queue, cryptographic verification
 - **🧩 Modular**: Independent programs, composable design
@@ -278,8 +278,6 @@ We welcome contributions! Please see our [Contributing Guide](./CONTRIBUTING.md)
 
 ## 🔒 Security
 
-- **Audits:** Pending (planned Q2 2025)
-- **Bug Bounty:** Coming soon
 - **Responsible Disclosure:** contact@hypernodesolana.org
 
 ---
@@ -296,15 +294,6 @@ We welcome contributions! Please see our [Contributing Guide](./CONTRIBUTING.md)
 | **Modular Design** | 4 programs ✅ | 4 programs ✅ | 6 modules |
 
 ---
-
-## 📈 Roadmap
-
-- [x] **Q4 2024** - Architecture design
-- [x] **Q1 2025** - Core programs implementation (4/4 complete)
-- [ ] **Q2 2025** - Security audits
-- [ ] **Q2 2025** - Mainnet deployment
-- [ ] **Q3 2025** - SDK and tooling
-- [ ] **Q4 2025** - Governance integration
 
 ---
 
