@@ -64,4 +64,13 @@ pub mod hypernode_nodes {
     pub fn heartbeat(ctx: Context<Heartbeat>) -> Result<()> {
         instructions::heartbeat::heartbeat(ctx)
     }
+
+    /// Check node health (permissionless - Checker system)
+    pub fn check_health(
+        ctx: Context<CheckHealth>,
+        passed: bool,
+        message: String,
+    ) -> Result<()> {
+        instructions::check_health::check_health(ctx, passed, message)
+    }
 }

@@ -37,6 +37,13 @@ pub struct Node {
     pub last_heartbeat: i64,
     pub is_active: bool,
 
+    /// Health check stats (Checker system)
+    pub last_health_check: i64,
+    pub total_health_checks: u64,
+    pub passed_health_checks: u64,
+    pub failed_health_checks: u64,
+    pub health_check_pass_rate: u8, // 0-100
+
     /// PDA bump
     pub bump: u8,
 }
@@ -66,6 +73,11 @@ impl Node {
         8 + // registered_at
         8 + // last_heartbeat
         1 + // is_active
+        8 + // last_health_check
+        8 + // total_health_checks
+        8 + // passed_health_checks
+        8 + // failed_health_checks
+        1 + // health_check_pass_rate
         1; // bump
 }
 

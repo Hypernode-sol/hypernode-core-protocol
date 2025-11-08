@@ -61,6 +61,13 @@ pub fn register(
     node.last_heartbeat = clock.unix_timestamp;
     node.is_active = true;
 
+    // Health check stats (initialized to zero)
+    node.last_health_check = 0;
+    node.total_health_checks = 0;
+    node.passed_health_checks = 0;
+    node.failed_health_checks = 0;
+    node.health_check_pass_rate = 0;
+
     node.bump = ctx.bumps.node;
 
     msg!(
