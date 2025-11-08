@@ -1,9 +1,17 @@
 [workspace]
+resolver = "2"
 members = [
+    "programs/hypernode-nodes",
+    "programs/hypernode-jobs",
+    "programs/hypernode-staking",
+    "programs/hypernode-rewards",
     "programs/node-registry",
     "programs/job-receipt",
     "programs/payment-splitter"
 ]
+
+[workspace.metadata.cargo-lock]
+version = 3
 
 [profile.release]
 overflow-checks = true
