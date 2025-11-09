@@ -1,5 +1,15 @@
 # Hypernode Core Protocol
 
+> **⚠️ DEPRECATED REPOSITORY**
+>
+> This repository has been consolidated into [hypernode-llm-deployer](https://github.com/Hypernode-sol/hypernode-llm-deployer).
+>
+> All programs (`hypernode-jobs`, `hypernode-nodes`) have been migrated to the main repository for better integration and maintenance.
+>
+> **Please use [hypernode-llm-deployer](https://github.com/Hypernode-sol/hypernode-llm-deployer) for all development going forward.**
+
+---
+
 **Modular Solana programs for decentralized compute marketplace**
 
 ![Solana](https://img.shields.io/badge/Solana-Program-9945FF?logo=solana)
